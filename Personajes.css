@@ -1,0 +1,317 @@
+:root {
+
+	--azul: #6982f5;
+	--fondo: #f4f4f4;
+}
+
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body {
+
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.menu-contenedor {
+
+	width: 90%;
+	margin: auto;
+}
+
+header {
+
+	padding: 30px 0;
+}
+
+header .menu-contenedor {
+
+    margin-top: 2em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--azul);
+	font-size: 60px;
+}
+
+header nav a {
+
+	color: #000000;
+	text-decoration: none;
+	margin-right: 20px;
+    font-weight: 600;
+	font-size: 1.60em;
+     
+}
+
+header nav a:hover,
+header nav a.activo {
+
+	color: #0a018c;
+}
+
+/* ---- ----- -----  sipnosis pagina principal ----- ----- ----- */
+
+.personajes{
+
+    margin-top: 5.5em;
+    padding: 7.12em;
+
+}
+
+
+.personajes .tarjetas {
+
+	margin: 78px;
+	margin-bottom: 6.25em;
+    
+}
+
+
+.tarjetas{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 480px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, .15);
+    min-height: 15.62em;
+	color: #000000;
+    transition: 0.5s;
+
+
+}
+
+.tarjetas:hover{
+
+    height: 650px;
+    margin-bottom: 1.12em;
+    margin-top: -1.12em;
+    background-color: #d6d6d6;
+
+}
+
+.tarjetas:hover .contenido .informacion h2{
+
+    padding-top: 0%;
+    font-size: 1.7em;
+
+}
+
+.img-tarjeta{
+
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.441);
+    background: #ffffff;
+    overflow: hidden;
+
+
+}
+
+.img-tarjeta img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.tarjetas:hover .img-tarjeta{
+
+    width: 200px;
+    height: 200px;
+
+}
+
+.tarjetas .contenido{
+
+    position:  absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+}
+
+.tarjetas .contenido .informacion{
+
+    padding-top: 0%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    width: 100%;
+    transition: 0.3s;
+    transform: translateY(355px);
+
+}
+
+.tarjetas:hover .contenido .informacion{
+
+    transition: 1s;
+    transform: translateY(0px);
+
+}
+
+.tarjetas .contenido .informacion h2{
+
+
+    transition: 0.5s;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.2em;
+}
+
+.tarjetas .contenido .informacion h2 span{
+
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+
+}
+
+.tarjetas .contenido .informacion .informacion-completa{
+
+    display: grid;
+    padding-top: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(1, 5fr);
+    grid-gap: 10px;
+    margin: 5px 5px;
+    text-align: justify;
+
+}
+
+.tarjetas .contenido .informacion .informacion-completa h3{
+
+    justify-content: center;
+    padding-bottom: 0%;
+    padding-top: 3%;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    font-weight: 600;
+
+}
+
+.tarjetas .contenido .informacion .informacion-completa span{
+
+    padding-top: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+
+
+/* ---- ----- -----  pie de pagina ----- ----- ----- */
+
+.pie-pagina{
+
+    
+    width: 100%;
+    background-color: hsl(0, 0%, 0%);
+    
+}
+
+.pie-pagina .acerca-de{
+
+    width: 100;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    padding: 80px 0px;
+
+}
+
+.pie-pagina .acerca-de .caja figure{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pie-pagina .acerca-de .caja .imagen{
+
+    width: 250px;
+    border-radius: 10%;
+    
+}
+
+.pie-pagina .acerca-de .caja h2{
+
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 70px;    
+}
+
+.pie-pagina .acerca-de .caja p{
+
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: justify;
+    
+}
+
+.pie-pagina .acerca-de .caja .telegram a {
+
+
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+    background-size: cover;
+    margin-left: 60px;
+    
+}
+
+
+.pie-pagina .acerca-de .caja .telegram a:hover {
+
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+	color: var(--azul);
+    text-align: center;
+    background-color: #000000;
+    background-size: cover;
+
+
+}
