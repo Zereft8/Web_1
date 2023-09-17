@@ -35,6 +35,7 @@ header .menu-contenedor {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
 
 header .logotipo {
@@ -81,6 +82,8 @@ header nav a.activo {
 
 .tarjetas{
 
+    filter: blur(3px);
+    opacity: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +95,10 @@ header nav a.activo {
     box-shadow: 0 35px 80px rgba(0, 0, 0, .15);
     min-height: 15.62em;
 	color: #000000;
-    transition: 0.5s;
+    transition-timing-function: ease-out;
+    transition-duration: 0.7s  ;
+    transition-property: all;
+    transform: translateY(55px);
 
 
 }
@@ -175,7 +181,7 @@ header nav a.activo {
 
 .tarjetas:hover .contenido .informacion{
 
-    transition: 1s;
+    transition: 1.4s;
     transform: translateY(0px);
 
 }
@@ -229,17 +235,27 @@ header nav a.activo {
     opacity: 0.9;
 }
 
+/* ---- ---- ---- Animacion tarjetas ---- ---- ----*/
+
+
+.show{
+
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0px);
+
+}
 
 
 /* ---- ----- -----  pie de pagina ----- ----- ----- */
 
 .pie-pagina{
 
-    
     width: 100%;
     background-color: hsl(0, 0%, 0%);
-    
+
 }
+
 
 .pie-pagina .acerca-de{
 
@@ -252,6 +268,7 @@ header nav a.activo {
     padding: 80px 0px;
 
 }
+
 
 .pie-pagina .acerca-de .caja figure{
 
@@ -315,3 +332,54 @@ header nav a.activo {
 
 
 }
+
+
+@keyframes slideInDown { 
+    
+    from {
+
+        transform: translateY(-130px);
+
+    }
+
+    to {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+.menu-contenedor{
+
+    animation-duration: 2s ;
+    animation-name: slideInDown;
+    animation-timing-function: ease;
+
+}
+
+
+@keyframes hide { 
+    
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+    }
+
+}
+
+
+.pie {
+
+    animation-duration: 3s ;
+    animation-name: hide;
+    animation-timing-function: ease;
+
+}
+
